@@ -1,4 +1,4 @@
-package com.springboot.batch;
+package com.springboot.batch.config;
 
 
 import lombok.RequiredArgsConstructor;
@@ -33,6 +33,7 @@ public class JobConfiguration extends DefaultBatchConfiguration{
     }
 
 
+    @Bean
     public Step helloStep1(JobRepository repository, PlatformTransactionManager transactionManager){
         return
 //                stepBuilderFactory.get("helloStep1")
