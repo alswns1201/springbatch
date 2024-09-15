@@ -3,6 +3,7 @@ package com.springboot.batch.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.core.Job;
+import org.springframework.batch.core.JobParameters;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.StepContribution;
 import org.springframework.batch.core.configuration.support.DefaultBatchConfiguration;
@@ -15,6 +16,8 @@ import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.PlatformTransactionManager;
+
+import java.util.Map;
 
 
 @RequiredArgsConstructor // 자동으로 의존성 주입
@@ -43,6 +46,17 @@ public class JobConfiguration extends DefaultBatchConfiguration{
                     public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
 
                         System.out.println("----spring batch hellostep1");
+
+                        JobParameters jobParameters = contribution.getStepExecution().getJobExecution().getJobParameters();
+
+                        jobParameters.getString("name");
+                        jobParameters.getLong("seq");
+                        jobParameters.getDate("date");
+                        jobParameters.getDouble("age");
+
+                        //chunck를 이용 차이는 chunck는 map을 반환함.
+                        Map<String, Object> jobParameters1 = chunkContext.getStepContext().getJobParameters();
+
 
                         return RepeatStatus.FINISHED;
                         // Repeat에서 계속 반복할것인지 (null : FINISHED와 동일 은 1번 실행시키고 종료 )
