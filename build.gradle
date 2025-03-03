@@ -38,6 +38,8 @@ dependencies {
 	// Prometheus 의존성 (Micrometer)
 	implementation 'io.micrometer:micrometer-registry-prometheus'
 
+	implementation 'io.codef.api:easycodef-java:1.0.5'
+
 
 }
 
