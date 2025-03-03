@@ -24,10 +24,10 @@ public class ThreadService {
     @PostConstruct
     public void init() {
         codef.setClientInfoForDemo(
-                "7b96ef9f-dc67-4a09-9ac3-d8d11318d236",
-                "a300f039-b4ab-495d-93fe-89d2ca108177"
+                "**",
+                "**"
         );
-        codef.setPublicKey("MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6Sf7VZr+GB73JDBpkD0xhssPi7ancAxOGWljyjYCMMfmRM7OjwkhHoJyAJDOnru/3xrWbzT6qjZxHQ+TAg8cdSTKudWRmo2EoPyB9HHmO6SVfY/bUu6Ti1oRq8ZA//ErxhgZSyvlYBnk+QULbiRPw4bw8bZDhsU7zfZn52b5ZEvHSxAHJjuUzKSbtULiMUVj+t/vPI6CujS5GmmZRxTF32GT4rucuWxCGyR8/BChgRd+y0B9JRA5o92oJYkNR0gqNpCe0DtdWGe+bxzhzGwX75tnHHupFdzWQe/ydEr9I4lpPA9qIg1OLRGyqisEmF7c+HrtttsV3ZNXwW2Qxwu3LwIDAQAB");
+        codef.setPublicKey("**");
     }
 
 
