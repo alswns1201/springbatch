@@ -1,4 +1,4 @@
-package com.springboot.batch.join;
+package com.springboot.batch.thread.join;
 
 import com.springboot.batch.thread.util.ThreadLogger;
 import lombok.extern.log4j.Log4j2;
