@@ -1,12 +1,14 @@
 package com.springboot.batch.thread.util;
 
+import static com.springboot.batch.thread.util.MyLogger.*;
+
 public abstract class ThreadUtils {
 
     public static void sleep(long millis) {
         try {
             Thread.sleep(millis);
         } catch (InterruptedException e) {
-            ThreadLogger.log("인터럽트 발생, " + e.getMessage());
+            log("인터럽트 발생, " + e.getMessage());
             throw new RuntimeException(e);
         }
     }
